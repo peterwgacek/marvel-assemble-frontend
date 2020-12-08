@@ -1,0 +1,19 @@
+.Header {
+    background-color: #282c34;
+    color: #fff;
+    padding-left: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.NavLinks {
+    list-style: none;
+    display: flex;
+    padding-right: 10px;
+}
+
+.NavLinks li {
+    margin-right: 20px;
+}

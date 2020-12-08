@@ -1,10 +1,9 @@
-import './Header.css';
-
+import './Header.css'
 
 export default function Header(props) {
     return (
         <header className="Header">
-            <h1>My Project</h1>
+            <h1>Logo Here</h1>
             <nav>
                 <ul className="NavLinks">
                     <li>Logout</li>
