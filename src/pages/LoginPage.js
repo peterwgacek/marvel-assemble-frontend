@@ -1,4 +1,5 @@
 
+import { Route } from "react-router-dom";
 
 export default function LoginPage(props) {
     return (
@@ -9,3 +10,7 @@ export default function LoginPage(props) {
         </main>
     );
 }
+
+<Route exact render={props =>
+    <LoginPage />
+} />

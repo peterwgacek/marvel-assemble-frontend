@@ -1,4 +1,4 @@
-
+import { Route } from "react-router-dom";
 
 export default function DashboardPage(props) {
     return (
@@ -9,3 +9,7 @@ export default function DashboardPage(props) {
         </main>
     );
 }
+
+<Route exact render={props =>
+    <DashboardPage />
+} />
