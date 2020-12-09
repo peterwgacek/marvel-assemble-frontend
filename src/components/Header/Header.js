@@ -13,13 +13,12 @@ export default function Header(props) {
                         props.user ?
                             <>
                                 <li><Link to="/dashboard">TEAMS</Link></li>
-                                <li><Link to="/logout">LOG OUT</Link></li>
-
+                                <li><Link to="" onClick={props.handleLogout}>LOGOUT</Link></li>
                             </>
                             :
                             <>
+                                <li><Link to="/signup">SIGN UP</Link></li>
                                 <li><Link to="/login">LOG IN</Link></li>
-                                <li><Link to="/signup">SIGN-UP</Link></li>
                             </>
                     }
                 

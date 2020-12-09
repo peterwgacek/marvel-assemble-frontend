@@ -1,37 +1,41 @@
-
 import { useState } from 'react';
 
-// Component Import
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import DashboardPage from "./pages/DashboardPage";
-import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
-// Services imports
-import { Switch, Route, withRouter } from "react-router-dom";
-import { getUser } from './services/userService';
+import HomePage from './pages/HomePage';
+import DashboardPage from './pages/DashboardPage';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
+
+import { Switch, Route, withRouter } from 'react-router-dom';
+
+import { getUser, logout } from './services/userService';
 
 import './App.css';
 
-
 function App(props) {
-  // Component State
+  /* component state */
   const [userState, setUserState] = useState({ user: getUser() });
 
-  //Helper Functions
+  /* helper functions */
 
   function handleSignupOrLogin() {
     // place user into state using the setter function
     setUserState({ user: getUser() });
-    // programtically route user to dashboard
+    // programmatically route user to dashboard
     props.history.push('/dashboard');
+  }
+
+  function handleLogout() {
+    logout();
+    setUserState({ user: null });
+    props.history.push('/');
   }
 
   return (
     <div className="App">
-      <Header user={userState.user} />
+      <Header user={userState.user} handleLogout={handleLogout} />
       <Switch>
         <Route exact path="/" render={props =>
           <HomePage />
