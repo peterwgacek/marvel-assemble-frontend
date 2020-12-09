@@ -28,6 +28,7 @@ export default function SignupPage(props) {
             await signup(formState);
             // calling a helper function defined in App.js to add the user to state
             props.handleSignupOrLogin();
+
         } catch (error) {
             alert(error.message);
         }

@@ -9,10 +9,20 @@ export default function Header(props) {
             </Link>
             <nav>
                 <ul className="NavLinks">
-                    <li><Link to="/dashboard">Teams</Link></li>
-                    <li><Link to="/signup">Sign-Up</Link></li>
-                    <li><Link to="/login">Login</Link></li>
-                    <li><Link to="/logout">Logout</Link></li>
+                    {
+                        props.user ?
+                            <>
+                                <li><Link to="/dashboard">TEAMS</Link></li>
+                                <li><Link to="/logout">LOG OUT</Link></li>
+
+                            </>
+                            :
+                            <>
+                                <li><Link to="/login">LOG IN</Link></li>
+                                <li><Link to="/signup">SIGN-UP</Link></li>
+                            </>
+                    }
+                
                 </ul>
             </nav>
         </header>
