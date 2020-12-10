@@ -21,7 +21,7 @@ export default function Header(props) {
                                 <li><Link to="/login">LOG IN</Link></li>
                             </>
                     }
-                
+
                 </ul>
             </nav>
         </header>
