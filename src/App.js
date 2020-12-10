@@ -1,5 +1,5 @@
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
+import { getHeroes } from './services/marvel-api';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import DashboardPage from './pages/DashboardPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
+// import SearchPage from './pages/SearchPage';
 
 import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 
@@ -32,6 +33,17 @@ function App(props) {
     setUserState({ user: null });
     props.history.push('/');
   }
+
+  async function getAppData() {
+    const data = await getHeroes();
+    console.log(data)
+  }
+
+  useEffect(() => {
+    getAppData();
+    console.log('effect');
+  }, []);
+
 
   return (
     <div className="App">
