@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { getHeroes } from './services/marvel-api';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Hero from './components/Hero/Hero';
 import HomePage from './pages/HomePage';
 import DashboardPage from './pages/DashboardPage';
 import LoginPage from './pages/LoginPage';
@@ -23,10 +22,10 @@ function App(props) {
     props.history.push('/dashboard');
   }
 
-  function handleSignupOrLogin() {
-    setUserState({ user: getUser() });
-    props.history.push('/search');
-  }
+  // function handleSearch() {
+  //   setUserState({ user: getUser() });
+  //   props.history.push('/search');
+  // }
 
   function handleLogout() {
     logout();
@@ -50,16 +49,15 @@ function App(props) {
 
   return (
     <div className="App">
-      <Header user={userState.user} handleLogout={handleLogout} />
+      <Header user={userState.user}
+        handleLogout={handleLogout} />
       <Switch>
         <Route exact path="/" render={props =>
           <HomePage />
         } />
-
         <Route exact path="/search" render={props =>
           <SearchPage />
         } />
-
         <Route exact path="/dashboard" render={props =>
           getUser() ?
             <DashboardPage />

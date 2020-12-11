@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Hero from '../components/Hero/Hero'
 import { getHeroes } from '../services/marvel-api'
-// import './Pages.css'
 
 export default function SearchPage(props) {
     const [formState, setFormState] = useState({
@@ -31,7 +30,7 @@ export default function SearchPage(props) {
             <form onSubmit={search}>
                 <div className="transbox">
                     <input name="search" type="text" className="form-control" value={formState.search} placeholder="" onChange={handleChange} />
-                    <input type="submit" value="Search" />
+                    <input type="submit" value="ASSEMBLE!" />
                 </div>
             </form>
             <div className="Heroes">
