@@ -6,9 +6,7 @@ export default function SearchPage(props) {
     const [formState, setFormState] = useState({
         search: ''
     })
-    const [HeroData, setHeroData] = useState({
-        items: []
-    })
+    const [heroData, setHeroData] = useState([])
 
     function handleChange(event) {
         setFormState(prevState => ({
@@ -16,14 +14,17 @@ export default function SearchPage(props) {
             [event.target.name]: event.target.value
         }))
     }
+
     async function search(event) {
         event.preventDefault();
+        console.log(formState.search)
         const data = await getHeroes(formState.search);
-        setHeroData(data)
+
+        setHeroData(data.data.results)
         setFormState({
             search: ''
         })
-
+        console.log(data.data.results)
     }
     return (
         <main className="Page">
@@ -33,11 +34,11 @@ export default function SearchPage(props) {
                     <input type="submit" value="ASSEMBLE!" />
                 </div>
             </form>
-            <div className="Heroes">
-                {HeroData.results && HeroData.results.map((result, idx) => (
-                    <Hero key={idx} result={result} />
+            {/* <div className="Heroes">
+                {heroData.data.data && heroData.data.data.map((data, idx) => (
+                    <Hero data={data} />
                 ))}
-            </div>
+            </div> */}
         </main>
     )
 }

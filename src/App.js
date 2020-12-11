@@ -33,7 +33,7 @@ function App(props) {
     props.history.push('/');
   }
 
-  const [HeroData, setHeroData] = useState({
+  const [heroData, setHeroData] = useState({
     results: [],
   })
 
