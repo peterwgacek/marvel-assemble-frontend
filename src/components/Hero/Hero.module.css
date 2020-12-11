@@ -1,0 +1,10 @@
+.Heroes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    background-color: #EEBF00;
+    width: 200px;
+    height: 400px;
+}

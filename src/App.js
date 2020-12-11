@@ -2,30 +2,30 @@ import { useState, useEffect } from 'react';
 import { getHeroes } from './services/marvel-api';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-
+import Hero from './components/Hero/Hero';
 import HomePage from './pages/HomePage';
 import DashboardPage from './pages/DashboardPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
-// import SearchPage from './pages/SearchPage';
-
+import SearchPage from './pages/SearchPage';
 import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
-
 import { getUser, logout } from './services/userService';
-
 import './App.css';
 
 function App(props) {
+
   /* component state */
   const [userState, setUserState] = useState({ user: getUser() });
 
   /* helper functions */
+  function handleSignupOrLogin() {
+    setUserState({ user: getUser() });
+    props.history.push('/dashboard');
+  }
 
   function handleSignupOrLogin() {
-    // place user into state using the setter function
     setUserState({ user: getUser() });
-    // programmatically route user to dashboard
-    props.history.push('/dashboard');
+    props.history.push('/search');
   }
 
   function handleLogout() {
@@ -34,16 +34,19 @@ function App(props) {
     props.history.push('/');
   }
 
+  const [HeroData, setHeroData] = useState({
+    results: [],
+  })
+
   async function getAppData() {
     const data = await getHeroes();
-    console.log(data)
+    setHeroData(data);
   }
 
   useEffect(() => {
     getAppData();
     console.log('effect');
   }, []);
-
 
   return (
     <div className="App">
@@ -52,6 +55,11 @@ function App(props) {
         <Route exact path="/" render={props =>
           <HomePage />
         } />
+
+        <Route exact path="/search" render={props =>
+          <SearchPage />
+        } />
+
         <Route exact path="/dashboard" render={props =>
           getUser() ?
             <DashboardPage />
