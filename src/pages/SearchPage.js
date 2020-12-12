@@ -24,7 +24,7 @@ export default function SearchPage(props) {
         setFormState({
             search: ''
         })
-        console.log(data.data.results)
+        // console.log(data.data.results)
     }
     return (
         <main className="Page">
@@ -34,11 +34,11 @@ export default function SearchPage(props) {
                     <input type="submit" value="ASSEMBLE!" />
                 </div>
             </form>
-            {/* <div className="Heroes">
-                {heroData.data.data && heroData.data.data.map((data, idx) => (
+            <div className="Heroes">
+                {heroData && heroData.map((data, idx) => (
                     <Hero data={data} />
                 ))}
-            </div> */}
+            </div>
         </main>
     )
 }

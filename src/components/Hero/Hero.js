@@ -5,9 +5,11 @@ function Hero(props) {
     console.log(props);
     return (
         <div className={styles.Heroes}>
-
-            {/* <h2>Name: {props.data.data.results}</h2> */}
-
+            <ul>
+                <li>Name: {props.data.name} </li>
+                <li>Description: {props.data.description} </li>
+                <img src={`${props.data.thumbnail}`} alt="" />
+            </ul>
         </div>
     )
 

@@ -1,0 +1,34 @@
+.Page {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../imgs/library.jpg");
+}
+
+.Page>h1 {
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+h1 {
+    justify-content: center;
+}
+
+
+.collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+}
+
+.Hero {
+    margin: 15px;
+}
+
+ul {
+    list-style: none;
+}
