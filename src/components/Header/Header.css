@@ -1,16 +1,24 @@
 .Header {
-    background-color: #282c34;
+    background-color: black;
     color: #fff;
     padding-left: 10px;
-    height: 100px;
+    height: 120px;
     display: flex;
+    font-size: 20px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    font-family: 'Marvel-Regular';
+}
+
+.Header {
+    display: flex;
+    flex-direction: column;
 }
 
 .Header a {
     text-decoration: none;
     color: #fff;
+
 }
 
 .NavLinks {
@@ -21,4 +29,13 @@
 
 .NavLinks li {
     margin-right: 20px;
+}
+
+.logo {
+    width: 220px;
+    height: 100px;
+}
+
+.headerlogo {
+    width: 400px;
 }

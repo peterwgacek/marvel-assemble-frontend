@@ -1,12 +1,13 @@
 
 import { Link } from 'react-router-dom';
 
+
 export default function HomePage(props) {
     return (
         <main className="Page">
             <h1>
-                Home Page
-         </h1>
+                <img src="/favicon.png" alt="hero" className="headerlogo" />
+            </h1>
             <p>
                 Welcome True Believer to Marvel Assemble!
                 <br />

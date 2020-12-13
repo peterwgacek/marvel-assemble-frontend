@@ -1,6 +1,23 @@
 .Footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: space-around;
     height: 50px;
+    background-color: black;
+    font-size: 25px;
+    color: white;
+    font-family: 'Marvel-Regular';
+}
+
+
+.Footer a {
+    font-size: 25px;
+    color: white;
+    font-family: 'Marvel-Regular';
+    margin: 5px;
+
+}
+
+.links {
+    justify-content: space-between;
 }

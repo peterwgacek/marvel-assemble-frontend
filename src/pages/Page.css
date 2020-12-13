@@ -1,34 +1,27 @@
 .Page {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url("../imgs/library.jpg");
+    color: red;
 }
 
 .Page>h1 {
-    margin-bottom: 50px;
+
     justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
 }
 
-h1 {
-    justify-content: center;
-}
-
-
-.collection {
+.Heroes {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 15px;
 }
 
-.Hero {
-    margin: 15px;
-}
-
-ul {
-    list-style: none;
+.headerlogo {
+    width: 20px;
 }

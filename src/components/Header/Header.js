@@ -4,9 +4,11 @@ import './Header.css';
 export default function Header(props) {
     return (
         <header className="Header">
-            <Link to="/">
-                <h1>Logo Here</h1>
-            </Link>
+            <div>
+                <Link to="/">
+                    <img src="/logo.png" alt="hero" className="logo" />
+                </Link>
+            </div>
             <nav>
                 <ul className="NavLinks">
                     {
@@ -25,7 +27,7 @@ export default function Header(props) {
                     }
 
                 </ul>
-            </nav>
-        </header>
+            </nav >
+        </header >
     );
 }

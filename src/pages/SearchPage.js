@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Hero from '../components/Hero/Hero'
 import { getHeroes } from '../services/marvel-api'
 
+
 export default function SearchPage(props) {
     const [formState, setFormState] = useState({
         search: ''
