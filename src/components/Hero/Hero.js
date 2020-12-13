@@ -6,9 +6,10 @@ function Hero(props) {
     return (
         <div className={styles.Heroes}>
             <ul>
-                <li>Name: {props.data.name} </li>
-                <li>Description: {props.data.description} </li>
                 {/* <li><img src={props.data.character.thumbnail} alt="hero" /></li> */}
+                <li className="info">Name: {props.data.name} </li>
+                <li className="info">Description: {props.data.description} </li>
+
             </ul>
         </div>
     )
