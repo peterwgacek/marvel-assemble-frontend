@@ -1,3 +1,10 @@
+/* @font-face {
+    font-family: 'Marvel-Regular';
+    font-weight: 400;
+    src: url('/1../assets/Marvel-Regular.ttf'), format('truetype');
+} */
+
+
 .Header {
     background-color: black;
     color: #fff;

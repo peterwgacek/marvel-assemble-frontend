@@ -18,7 +18,6 @@ export default function SearchPage(props) {
 
     async function search(event) {
         event.preventDefault();
-        console.log(formState.search)
         const data = await getHeroes(formState.search);
 
         setHeroData(data.data.results)
@@ -27,12 +26,22 @@ export default function SearchPage(props) {
         })
         // console.log(data.data.results)
     }
+
+    function formValid() {
+        return !!(formState.search);
+    }
+
     return (
         <main className="Page">
+            <h2>Simply type in the name of the hero
+                <br />
+            or villain you're searching for
+            <br />
+                  and hit the ASSEMBLE! button</h2>
             <form onSubmit={search}>
                 <div className="transbox">
                     <input name="search" type="text" className="form-control" value={formState.search} placeholder="" onChange={handleChange} />
-                    <input type="submit" value="ASSEMBLE!" />
+                    <input disabled={!formValid()} type="submit" value="ASSEMBLE!" />
                 </div>
             </form>
             <div className="Heroes">
