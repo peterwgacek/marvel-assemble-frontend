@@ -4,7 +4,7 @@ import { login } from '../services/userService';
 
 export default function LoginPage(props) {
     /* component state */
-    console.log(req.body)
+
     const [formState, setFormState] = useState({
         email: "",
         password: ""

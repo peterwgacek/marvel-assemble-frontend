@@ -22,11 +22,6 @@ function App(props) {
     props.history.push('/dashboard');
   }
 
-  // function handleSearch() {
-  //   setUserState({ user: getUser() });
-  //   props.history.push('/search');
-  // }
-
   function handleLogout() {
     logout();
     setUserState({ user: null });
