@@ -49,7 +49,7 @@ export default function LoginPage(props) {
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input disabled={!formValid()} value="Login" className="form-control" type="submit" />
+                        <input disabled={!formValid()} value="Login" className="btn-btn-default" type="submit" />
                         &nbsp;&nbsp;
                         <Link to="/">Cancel</Link>
                     </div>

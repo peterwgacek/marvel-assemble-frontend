@@ -55,7 +55,7 @@ export default function SignupPage(props) {
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12 text-center">
-                        <input disabled={!formValid()} type="submit" className="btn btn-default" value="Sign Up" />
+                        <input disabled={!formValid()} type="submit" className="btn-btn-default" value="Sign Up" />
               &nbsp;&nbsp;
               <Link to='/'>Cancel</Link>
                     </div>

@@ -7,7 +7,7 @@ function Hero(props) {
     return (
         <div className={styles.Heroes}>
             <ul>
-                <li><img src={`${path}/standard_large.${extension}`} alt="hero" /></li>
+                <img src={`${path}/standard_large.${extension}`} alt="hero" />
                 <li className="info">Name: {props.data.name} </li>
                 <li className="info">Description: {props.data.description} </li>
 

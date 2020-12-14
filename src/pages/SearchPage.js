@@ -34,14 +34,13 @@ export default function SearchPage(props) {
     return (
         <main className="Page">
             <h2>Simply type in the name of the hero
-                <br />
             or villain you're searching for
             <br />
                   and hit the ASSEMBLE! button</h2>
             <form onSubmit={search}>
                 <div className="transbox">
                     <input name="search" type="text" className="form-control" value={formState.search} placeholder="" onChange={handleChange} />
-                    <input disabled={!formValid()} type="submit" value="ASSEMBLE!" />
+                    <input disabled={!formValid()} type="submit" value="ASSEMBLE!" className="btn-search" />
                 </div>
             </form>
             <div className="Heroes">
@@ -49,6 +48,6 @@ export default function SearchPage(props) {
                     <Hero data={data} />
                 ))}
             </div>
-        </main>
+        </main >
     )
 }
