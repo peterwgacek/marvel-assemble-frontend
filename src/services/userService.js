@@ -1,6 +1,6 @@
 import { setToken, getUserFromToken, removeToken } from './tokenService';
 
-const BASE_URL = ' https://marvel-assemble-backend.herokuapp.com';
+const BASE_URL = ' https://https://marvel-assemble.herokuapp.com';
 
 
 function signup(user) {
