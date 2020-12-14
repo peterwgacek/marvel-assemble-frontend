@@ -66,6 +66,8 @@ p {
 
 .form-control {
   border: solid 5px #F20206;
+  height: 60px;
+
 }
 
 .btn-btn-default {

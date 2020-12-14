@@ -34,7 +34,7 @@ export default function SearchPage(props) {
     return (
         <main className="Page">
             <h2>Simply type in the name of the hero
-            or villain you're searching for
+            you're searching for
             <br />
                   and hit the ASSEMBLE! button</h2>
             <form onSubmit={search}>

@@ -26,6 +26,7 @@ Sign-Up: ![screenshot4](./public/signup.png)
 - JSX
 - Procreate -logo
 - Gimp - logo/background
+- draw.io - for wireframe/ERD
 
 ## Trello:
 
@@ -33,7 +34,7 @@ Sign-Up: ![screenshot4](./public/signup.png)
 
 ## ERD:
 
-![ERD](./public/ERD.png)
+![ERD](./public/project3ERD.png)
 
 ## Wireframe: 
 
