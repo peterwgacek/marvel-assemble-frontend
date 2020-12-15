@@ -18,15 +18,19 @@ Sign-Up: ![screenshot4](./public/signup.png)
 
 - Node
 - Express
-- MongoDB
+- MongoDB/Mongoose
 - HTML5
 - CSS3
+- AJAX
 - JavaScript
 - jQuery
 - JSX
+- React
+- Heroku
 - Procreate -logo
 - Gimp - logo/background
 - draw.io - for wireframe/ERD
+- MARVEL's API
 
 ## Trello:
 

@@ -24,7 +24,7 @@ export default function SearchPage(props) {
         setFormState({
             search: ''
         })
-        // console.log(data.data.results)
+
     }
 
     function formValid() {
