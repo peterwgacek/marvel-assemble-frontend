@@ -45,7 +45,7 @@ export default function SearchPage(props) {
             </form>
             <div className="Heroes">
                 {heroData && heroData.map((data, idx) => (
-                    <Hero data={data} />
+                    <Hero data={data} key={idx} />
                 ))}
             </div>
         </main >
