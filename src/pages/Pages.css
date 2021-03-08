@@ -1,0 +1,47 @@
+.Page {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Avengeance Heroic Avenger';
+    background-image: url("./assets/background.png");
+}
+
+.Page>h1,
+h2 {
+    color: #F7EE02;
+    font-size: 47px;
+    -webkit-text-stroke: 2px black;
+    margin: 50px;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: 700px;
+    height: 100px;
+    border: solid 5px #F20206;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 1px 1px 8px 1px black;
+    color: black;
+}
+
+.form-control {
+    border: solid 5px #F20206;
+    height: 60px;
+
+}
+
+.btn-btn-default {
+    width: 200px;
+}
+
+.btn-search {
+    width: 300px;
+    height: 35px;
+}
