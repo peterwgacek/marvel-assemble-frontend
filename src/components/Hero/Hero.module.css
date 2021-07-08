@@ -1,4 +1,4 @@
-@import url('https://www.maisfontes.com/marvel-regular');
+/* @import url('https://www.maisfontes.com/marvel-regular'); */
 
 .Heroes {
     display: flex;
@@ -23,7 +23,7 @@
 
 }
 
-ul>img {
+.Heroes>img {
     display: flex;
     justify-content: center;
     flex-direction: column;
